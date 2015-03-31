@@ -12,15 +12,15 @@
 
   %tbody
     - @posts.each do |post|
-      %tr
-        %td= post.description
-        %td= image_tag post.photo, size: '400x300'
-        %td= post.user_id
-        %td= link_to 'Show', post
-        %td= link_to 'Dislike', post
-        %td= post.dislike_count= ""
+
+      %td= post.description
+      %td= image_tag post.photo, size: '400x300'
+      %td= post.user_id
+      %td= link_to 'Show', post
+      %td= link_to 'Dislike', dislike_post_path(post)
+      %td= post.dislike_count
 
 
 %br
 
-= link_to 'New Post', new_post_path
+= link_to 'New Post', new_post_path, class: "link btn btn-success"
