@@ -17,6 +17,8 @@
         %td= image_tag post.photo, size: '400x300'
         %td= post.user_id
         %td= link_to 'Show', post
+        %td= link_to 'Dislike', post
+        %td= post.dislike_count= ""
 
 
 %br
