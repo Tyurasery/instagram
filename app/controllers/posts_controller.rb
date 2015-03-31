@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  
+
 
   # POST /posts
   # POST /posts.json
@@ -34,6 +34,11 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def dislike
+    
+    redirect_to posts_path
   end
 
   # PATCH/PUT /posts/1
